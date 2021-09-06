@@ -32,22 +32,24 @@ class ClienteCorporativo(Cliente):
     def mostrarCliente(self):
         print(self.nombre, self.__contrato)
 
-class ClientePersonal(Cliente):
+class Cliente(Cliente):
     def __init__(self,contrato):
-        super().__init__(nom,ced,tel,promocion)
-        self.__promocion=promocion
+        super().__init__(nom,ced,tel,contrato)
+        self.__contrato=contrato
 
     @property
-    def promocion(self):     #getter: obtener el valor del atributo privado
+    def contrato(self):     #getter: obtener el valor del atributo privado
         return self.__contrato
+    @contrato.setter
+    def contrato(self,value):     #setter: asigna el valor del atributo privado
+        self.__contrato = value 
 
     def mostrarCliente(self):
-        print(self.nombre, self.__promocion)        
+        print(self.nombre, self.__contrato)        
 
 # emp=Empresa("El mas barato","0953156049","0998132446","Coop. Juan Montalvo")
 # emp.mostrarEmpresa()
 # print(emp.nombre)
-
 cli=ClienteCorporativo("0001")
 cli.mostrarCliente
 print("terminado")

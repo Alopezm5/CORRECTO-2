@@ -47,7 +47,6 @@ class ClientePersonal(Cliente):
 # emp=Empresa("El mas barato","0953156049","0998132446","Coop. Juan Montalvo")
 # emp.mostrarEmpresa()
 # print(emp.nombre)
-
 cli=ClienteCorporativo("0001")
 cli.mostrarCliente
 print("terminado")

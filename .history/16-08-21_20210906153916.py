@@ -40,6 +40,7 @@ class ClientePersonal(Cliente):
     @property
     def promocion(self):     #getter: obtener el valor del atributo privado
         return self.__contrato
+        
 
     def mostrarCliente(self):
         print(self.nombre, self.__promocion)        

@@ -42,12 +42,11 @@ class ClientePersonal(Cliente):
         return self.__contrato
 
     def mostrarCliente(self):
-        print(self.nombre, self.__promocion)        
+        print(self.nombre, self.__)        
 
 # emp=Empresa("El mas barato","0953156049","0998132446","Coop. Juan Montalvo")
 # emp.mostrarEmpresa()
 # print(emp.nombre)
-
 cli=ClienteCorporativo("0001")
 cli.mostrarCliente
 print("terminado")
