@@ -28,7 +28,9 @@ class ClienteCorporativo(Cliente):
     @contrato.setter
     def contrato(self,value):     #setter: asigna el valor del atributo privado
         if value:
-            return self.__contrato = value     
+            return self.__contrato = value 
+        else:
+            re    
 
     def mostrarCliente(self):
         print(self.nombre, self.__contrato)

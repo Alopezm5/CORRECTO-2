@@ -27,8 +27,7 @@ class ClienteCorporativo(Cliente):
         return self.__contrato
     @contrato.setter
     def contrato(self,value):     #setter: asigna el valor del atributo privado
-        if value:
-            return self.__contrato = value     
+        self.__contrato = value 
 
     def mostrarCliente(self):
         print(self.nombre, self.__contrato)
@@ -42,8 +41,7 @@ class ClientePersonal(Cliente):
     def promocion(self):     #getter: obtener el valor del atributo privado
         if self.__promocion==True:
             return "10% descuento"
-        else:    
-            return "No hay descuento"
+        return None
 
     def mostrarCliente(self):
         print(self.nombre, self.__promocion)        
