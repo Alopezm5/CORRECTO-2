@@ -1,0 +1,3 @@
+Jose;50;Ingenieria
+Juan;30;Salud
+Yadil;40;Administra
