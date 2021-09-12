@@ -81,8 +81,7 @@ class CabVenta:
         self.fecha=fecha
         self.cliente=cliente
         self.total=tot
-        detalle=DetVenta()
-        self.detalleVen=[detalle]
+        self.detalleVen=[]
 
     def agregarDetalle(self,articulo,cantidad):
         detalle=DetVenta(articulo,cantidad)
@@ -95,7 +94,7 @@ class CabVenta:
         self.cliente.mostrarCliente()
         print("Linea Articulo      Precio  Cantidad  Subtotal")
         for det in self.detalleVen:
-            print("{:5} {} {:6} {:7}".format(det.linea,det.articulo.descripcion,det.precio,det.cantidad))
+            print("{:5} {} {:6} {:7}".format(det.linea,))
         print("Total venta:{:26}".format(self.total))            
 
 emp=Empresa()
@@ -104,7 +103,7 @@ art1=Articulo("Aceite",3,100)
 art2=Articulo("Coca Cola",1,200)
 today=date.today()
 fecha=date(2021,8,15)
-venta=CabVenta("F0001",date.today(),cli1)
+venta=CabVenta("F0001",date.tofday(),cli1)
 venta.agregarDetalle(art1,3)
 venta.agregarDetalle(art2,2)
 venta.mostrarVenta(empresa.nombre, empresa.ruc)

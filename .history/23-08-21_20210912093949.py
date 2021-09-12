@@ -87,7 +87,7 @@ class CabVenta:
     def agregarDetalle(self,articulo,cantidad):
         detalle=DetVenta(articulo,cantidad)
         self.total+=detalle.precio*detalle.cantidad
-        self.detalleVen.append(detalle)        
+        self.detalleVen.append(DetVenta(articulo,cantidad))        
     
     def mostrarVenta(self,empNombre,empRuc):
         print("Empresa {:17} Ruc:{} ".format(empNombre,empRuc))
@@ -95,7 +95,7 @@ class CabVenta:
         self.cliente.mostrarCliente()
         print("Linea Articulo      Precio  Cantidad  Subtotal")
         for det in self.detalleVen:
-            print("{:5} {} {:6} {:7}".format(det.linea,det.articulo.descripcion,det.precio,det.cantidad))
+            print("{:5} {} {:6} {:7}".format(det.linea,))
         print("Total venta:{:26}".format(self.total))            
 
 emp=Empresa()

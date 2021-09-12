@@ -76,13 +76,12 @@ class DetVenta:
     
 
 class CabVenta:
-    def __init__(self,fac,fecha,cliente,tot=0):
+    def __init__(self,fac,fecha,empresa,cliente,tot=0):
         self.factura=fac
         self.fecha=fecha
         self.cliente=cliente
         self.total=tot
-        detalle=DetVenta()
-        self.detalleVen=[detalle]
+        self.detalleVen=[]
 
     def agregarDetalle(self,articulo,cantidad):
         detalle=DetVenta(articulo,cantidad)
@@ -95,7 +94,7 @@ class CabVenta:
         self.cliente.mostrarCliente()
         print("Linea Articulo      Precio  Cantidad  Subtotal")
         for det in self.detalleVen:
-            print("{:5} {} {:6} {:7}".format(det.linea,det.articulo.descripcion,det.precio,det.cantidad))
+            print("{:5} {} {:6} {:7}".format(det.linea,))
         print("Total venta:{:26}".format(self.total))            
 
 emp=Empresa()
