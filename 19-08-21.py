@@ -53,12 +53,31 @@ class ClientePersonal(Cliente):
         print(self.nombre, self.__promocion)        
  
 
+class Articulo:
+    secuencia=0
+    iva=0.12
+    def __init__(self,des,pre,sto):
+        Articulo.secuencia+=1
+        self.codigo=Articulo.secuencia
+        self.descripcion= des
+        self.precio=pre
+        self.stock=sto
+    def mostraArticulo(self):
+        print(self.codigo,self.nombre)
+
 class DetVenta:
     linea=0
     def __init__(self,articulo,cantidad):
             DetVenta.linea+=1
             self.lineaDetalle=DetVenta.linea
+            self.articulo=articulo
+            self.precio=articulo.precio
+            self.cantidad=cantidad
 
+    def agregarDetalle(self,articulo,cantidad):
+        detalle=DetVenta(articulo,cantidad)
+        self.total+=detalle.precio*detalle.cantidad
+        self.detalleVen.append(detalle)
 class CabVenta:
     def __init__(self,fac,empresa,fecha,cliente,tot=0):
         self.empresa=empresa
@@ -77,5 +96,14 @@ class CabVenta:
 
 cli1=ClientePersonal("Jose","0912231499","042567890",True)
 cli1.mostrarCliente
+art1=Articulo("Aceite",2,100)
+art1.mostraArticulo()
+art2=Articulo("Coca Cola",1,200)
+art2.mostraArticulo()
+
+art3=Articulo("Leche",1.5,200)
+art3.mostraArticulo()
+print(Articulo.iva())
+
 
 
