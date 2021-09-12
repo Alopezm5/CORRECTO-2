@@ -99,39 +99,18 @@ class CabVenta:
         self.cliente.mostrarCliente()
         print("Linea Articulo      Precio  Cantidad  Subtotal")
         for det in self.detalleVen:
-            print("{:5} {:15} {} {:6} {:7}".format(det.linea,det.articulo.descripcion,det.precio,det.cantidad,self.total))
+            print("{:5} {:15} {} {:6} {:7}".format(det.linea,det.articulo.descripcion,det.precio,det.cantidad,self.tota))
         print("Total venta:{:26}".format(self.total))            
 
-
 #cli=Cliente("Jose","0912231499","0982567890")
-# empresa=Empresa()
-# cli1=ClientePersonal("Jose","0912231499","0982567890",False)
-# print(cli1.getCedula())
-# art1=Articulo("Aceite",3,100)
-# art2=Articulo("Coca Cola",1,200)
-# today=date.today()
-# fecha=date(2021,8,15)
-# venta=CabVenta("F0001",date.today(),cli1)
-# venta.agregarDetalle(art1,3)
-# venta.agregarDetalle(art2,2)
-# venta.mostrarVenta(empresa.nombre, empresa.ruc)
-
-class InterfaceSistemaPago(ABC):
-    @abstractmethod
-    def pago(self):
-        pass
-
-    @abstractmethod
-    def saldo(self):
-        pass
-
-class PagoTarjetaImplements(InterfaceSistemaPago):
-    #este proceso hace el pago del calculo de interese de la tarjeta
-    def pago(self):
-        return "Pago Tarjeta"
-
-    def saldo(self):
-        return "Saldo Tarjetarabajado"
-
-pagoTarjeta=PagoTarjetaImplements()
-print(pagoTarjeta.pago())
+empresa=Empresa()
+cli1=ClientePersonal("Jose","0912231499","0982567890",False)
+print(cli1.getCedula())
+art1=Articulo("Aceite",3,100)
+art2=Articulo("Coca Cola",1,200)
+today=date.today()
+fecha=date(2021,8,15)
+venta=CabVenta("F0001",date.today(),cli1)
+venta.agregarDetalle(art1,3)
+venta.agregarDetalle(art2,2)
+venta.mostrarVenta(empresa.nombre, empresa.ruc)

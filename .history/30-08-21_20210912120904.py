@@ -116,7 +116,7 @@ class CabVenta:
 # venta.agregarDetalle(art2,2)
 # venta.mostrarVenta(empresa.nombre, empresa.ruc)
 
-class InterfaceSistemaPago(ABC):
+class InterfaceSistemaPago(ABC,cl):
     @abstractmethod
     def pago(self):
         pass
@@ -125,13 +125,3 @@ class InterfaceSistemaPago(ABC):
     def saldo(self):
         pass
 
-class PagoTarjetaImplements(InterfaceSistemaPago):
-    #este proceso hace el pago del calculo de interese de la tarjeta
-    def pago(self):
-        return "Pago Tarjeta"
-
-    def saldo(self):
-        return "Saldo Tarjetarabajado"
-
-pagoTarjeta=PagoTarjetaImplements()
-print(pagoTarjeta.pago())

@@ -102,7 +102,6 @@ class CabVenta:
             print("{:5} {:15} {} {:6} {:7}".format(det.linea,det.articulo.descripcion,det.precio,det.cantidad,self.total))
         print("Total venta:{:26}".format(self.total))            
 
-
 #cli=Cliente("Jose","0912231499","0982567890")
 # empresa=Empresa()
 # cli1=ClientePersonal("Jose","0912231499","0982567890",False)
@@ -122,16 +121,4 @@ class InterfaceSistemaPago(ABC):
         pass
 
     @abstractmethod
-    def saldo(self):
-        pass
-
-class PagoTarjetaImplements(InterfaceSistemaPago):
-    #este proceso hace el pago del calculo de interese de la tarjeta
-    def pago(self):
-        return "Pago Tarjeta"
-
-    def saldo(self):
-        return "Saldo Tarjetarabajado"
-
-pagoTarjeta=PagoTarjetaImplements()
-print(pagoTarjeta.pago())
+    def saldo(self)

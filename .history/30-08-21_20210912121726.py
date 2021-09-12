@@ -126,7 +126,6 @@ class InterfaceSistemaPago(ABC):
         pass
 
 class PagoTarjetaImplements(InterfaceSistemaPago):
-    #este proceso hace el pago del calculo de interese de la tarjeta
     def pago(self):
         return "Pago Tarjeta"
 
@@ -134,4 +133,4 @@ class PagoTarjetaImplements(InterfaceSistemaPago):
         return "Saldo Tarjetarabajado"
 
 pagoTarjeta=PagoTarjetaImplements()
-print(pagoTarjeta.pago())
+pagoTarjeta.
