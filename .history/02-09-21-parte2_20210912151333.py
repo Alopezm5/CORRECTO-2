@@ -23,3 +23,5 @@ except Exception as e:
     print("Eror de archivoc: "+ str(e))        
 finally:
     f.close()   
+
+
