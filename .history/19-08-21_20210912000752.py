@@ -57,7 +57,7 @@ class DetVenta:
     linea=0
     def __init__(self,articulo,cantidad):
             DetVenta.linea+=1
-            self.lineaDetalle=DetVenta.linea
+            self.lineaDetalle=DetVenta.lineaDetalle
 
 class CabVenta:
     def __init__(self,fac,empresa,fecha,cliente,tot=0):

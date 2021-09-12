@@ -53,11 +53,6 @@ class ClientePersonal(Cliente):
         print(self.nombre, self.__promocion)        
  
 
-class DetVenta:
-    linea=0
-    def __init__(self,articulo,cantidad):
-            DetVenta.linea+=1
-            self.lineaDetalle=DetVenta.linea
 
 class CabVenta:
     def __init__(self,fac,empresa,fecha,cliente,tot=0):

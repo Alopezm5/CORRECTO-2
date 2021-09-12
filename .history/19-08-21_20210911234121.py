@@ -53,23 +53,6 @@ class ClientePersonal(Cliente):
         print(self.nombre, self.__promocion)        
  
 
-class DetVenta:
-    linea=0
-    def __init__(self,articulo,cantidad):
-            DetVenta.linea+=1
-            self.lineaDetalle=DetVenta.linea
-
-class CabVenta:
-    def __init__(self,fac,empresa,fecha,cliente,tot=0):
-        self.empresa=empresa
-        self.factura=fac
-        self.fecha=fecha
-        self.cliente=cliente
-        self.total=tot
-        self.detalleVen=[]
-
-
-
 
 # emp=Empresa("El mas barato","0953156049","0998132446","Coop. Juan Montalvo")
 # emp.mostrarEmpresa()

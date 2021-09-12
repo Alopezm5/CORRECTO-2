@@ -54,10 +54,8 @@ class ClientePersonal(Cliente):
  
 
 class DetVenta:
-    linea=0
     def __init__(self,articulo,cantidad):
-            DetVenta.linea+=1
-            self.lineaDetalle=DetVenta.linea
+        
 
 class CabVenta:
     def __init__(self,fac,empresa,fecha,cliente,tot=0):
