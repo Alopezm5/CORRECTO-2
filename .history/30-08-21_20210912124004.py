@@ -146,8 +146,8 @@ class Vendedor():
     def __init__(self,nombre):
         self.nombre=nombre
 
-    def moduloPago(self,contratoV):
-        return contratoV.pago()
+    def moduloPago(self,contrato):
+        return contrato.pago()
 
 
 pagoTarjeta=PagoTarjetaImplements()

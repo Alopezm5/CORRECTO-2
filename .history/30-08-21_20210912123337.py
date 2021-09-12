@@ -143,16 +143,9 @@ class ImplementsPagoContrato(InterfaceSistemaPago):
 
 
 class Vendedor():
-    def __init__(self,nombre):
+    def __init__(self,numero):
         self.nombre=nombre
-
-    def moduloPago(self,contratoV):
-        return contratoV.pago()
-
-
 pagoTarjeta=PagoTarjetaImplements()
 print(pagoTarjeta.pago())
-Contrato=ImplementsPagoContrato()
-#print(Contrato.pago())
-ven1=Vendedor("Jose")
-print(ven1.moduloPago(Contrato))
+pagoContrato=ImplementsPagoContrato()
+print(pagoContrato.pago())

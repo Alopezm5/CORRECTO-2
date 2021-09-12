@@ -103,18 +103,18 @@ class CabVenta:
         print("Total venta:{:26}".format(self.total))            
 
 
-#cli=Cliente("Jose","0912231499","0982567890")
-# empresa=Empresa()
-# cli1=ClientePersonal("Jose","0912231499","0982567890",False)
-# print(cli1.getCedula())
-# art1=Articulo("Aceite",3,100)
-# art2=Articulo("Coca Cola",1,200)
-# today=date.today()
-# fecha=date(2021,8,15)
-# venta=CabVenta("F0001",date.today(),cli1)
-# venta.agregarDetalle(art1,3)
-# venta.agregarDetalle(art2,2)
-# venta.mostrarVenta(empresa.nombre, empresa.ruc)
+cli=Cliente("Jose","0912231499","0982567890")
+empresa=Empresa()
+cli1=ClientePersonal("Jose","0912231499","0982567890",False)
+print(cli1.getCedula())
+art1=Articulo("Aceite",3,100)
+art2=Articulo("Coca Cola",1,200)
+today=date.today()
+fecha=date(2021,8,15)
+venta=CabVenta("F0001",date.today(),cli1)
+venta.agregarDetalle(art1,3)
+venta.agregarDetalle(art2,2)
+venta.mostrarVenta(empresa.nombre, empresa.ruc)
 
 class InterfaceSistemaPago(ABC):
     @abstractmethod
