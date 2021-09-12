@@ -47,7 +47,7 @@ class ClientePersonal(Cliente):
     
 
     def mostrarCliente(self):
-        print("Cliente: {:13} Cedula:{}".format(self.nombre,self.cedula))        
+        print(self.nombre, self.__promocion)        
  
 
 class Articulo:
@@ -89,13 +89,7 @@ class CabVenta:
         self.detalleVen.append(detalle)        
     
     def mostrarVenta(self,empNombre,empRuc):
-        print("Empresa {:17} Ruc:{} ".format(empNombre,empRuc))
-        print("Factura#:{:13} Fecha:{}".format(self.factura,self.fecha))
-        self.cliente.mostrarCliente()
-        print("Linea Articulo      Precio  Cantidad  Subtotal")
-        for det in self.detalleVen:
-            print("{:5} {} {:6} {:7}".format(det.linea,))
-        print("Total venta:{:26}".format(self.total))            
+        print("Empresa {:17} Ruc:")
 
 
 # emp=Empresa("El mas barato","0953156049","0998132446","Coop. Juan Montalvo")

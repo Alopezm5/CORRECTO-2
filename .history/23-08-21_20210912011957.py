@@ -47,7 +47,7 @@ class ClientePersonal(Cliente):
     
 
     def mostrarCliente(self):
-        print("Cliente: {:13} Cedula:{}".format(self.nombre,self.cedula))        
+        print("Cliente: {:13} Cedula:{}".format(self.nombre,self))        
  
 
 class Articulo:
