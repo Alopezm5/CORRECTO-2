@@ -35,7 +35,7 @@ class ClienteCorporativo(Cliente):
 
 class ClientePersonal(Cliente):
     def __init__(self,nom,ced,tel,promocion=True):
-        #super().__init__(nom,ced,tel,)
+        super().__init__(nom,ced,tel,)
         self.__promocion=promocion
 
     @property
@@ -44,7 +44,6 @@ class ClientePersonal(Cliente):
             return "10% descuento"
         else:    
             return "No hay descuento"
-
 
     def mostrarCliente(self):
         print(self.nombre, self.__promocion)        

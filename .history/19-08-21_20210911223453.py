@@ -1,12 +1,12 @@
 class Empresa:
-    def __init__(self,nom="El mas barato",ruc="0999999999",tel="042971234",dir="Juan Montalvo"):
+    def __init__(self,nom="El mas barato",ruc="0999999999",tel,dir):
         self.nombre=nom
         self.ruc=ruc
         self.telefono=tel
         self.direccion=dir
     
     def mostrarEmpresa(self):
-        print("Empresa: {:17}, RUC: {}".format(self.nombre,self.ruc))
+        print("Empresa: {}, RUC: {}".format(self.nombre,self.ruc))
 
 class Cliente:
     def __init__(self,nom,ced,tel):
@@ -18,8 +18,8 @@ class Cliente:
         print(self.nombre,self.cedula,self.telefono)
 
 class ClienteCorporativo(Cliente):
-    def __init__(self,nomb,cedu,telecontrato):
-        super().__init__(nomb,cedu,tele,contrato)
+    def __init__(self,contrato):
+        super().__init__(nom,ced,tel,contrato)
         self.__contrato=contrato
 
     @property
@@ -34,8 +34,8 @@ class ClienteCorporativo(Cliente):
         print(self.nombre, self.__contrato)
 
 class ClientePersonal(Cliente):
-    def __init__(self,nom,ced,tel,promocion=True):
-        #super().__init__(nom,ced,tel,)
+    def __init__(self,contrato):
+        super().__init__(nom,ced,tel,promocion)
         self.__promocion=promocion
 
     @property
@@ -45,7 +45,6 @@ class ClientePersonal(Cliente):
         else:    
             return "No hay descuento"
 
-
     def mostrarCliente(self):
         print(self.nombre, self.__promocion)        
 
@@ -53,7 +52,8 @@ class ClientePersonal(Cliente):
 # emp.mostrarEmpresa()
 # print(emp.nombre)
 
-cli1=ClientePersonal("Jose","0912231499","042567890",True)
-cli1.mostrarCliente
+cli=ClienteCorporativo("0001")
+cli.mostrarCliente
+print("terminado")
 
 

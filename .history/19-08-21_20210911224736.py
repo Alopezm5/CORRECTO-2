@@ -45,7 +45,6 @@ class ClientePersonal(Cliente):
         else:    
             return "No hay descuento"
 
-
     def mostrarCliente(self):
         print(self.nombre, self.__promocion)        
 
