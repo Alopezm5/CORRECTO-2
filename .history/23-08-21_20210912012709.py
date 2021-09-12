@@ -75,9 +75,10 @@ class DetVenta:
     
 
 class CabVenta:
-    def __init__(self,fac,fecha,cliente,tot=0):
+    def __init__(self,fac,empNombre,empRuc,fecha,cliente,tot=0):
         self.factura=fac
         self.fecha=fecha
+        self.nombreEmp=em
         self.cliente=cliente
         self.total=tot
         self.detalleVen=[]
@@ -97,7 +98,7 @@ class CabVenta:
         print("Total venta:{:26}".format(self.total))            
 
 
-emp=Empresa()
+# emp=Empresa("El mas barato","0953156049","0998132446","Coop. Juan Montalvo")
 # emp.mostrarEmpresa()
 # print(emp.nombre)
 

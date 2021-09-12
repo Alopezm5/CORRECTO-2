@@ -97,7 +97,7 @@ class CabVenta:
         print("Total venta:{:26}".format(self.total))            
 
 
-emp=Empresa()
+# emp=Empresa("El mas barato","0953156049","0998132446","Coop. Juan Montalvo")
 # emp.mostrarEmpresa()
 # print(emp.nombre)
 
